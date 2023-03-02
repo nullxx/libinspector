@@ -10,10 +10,13 @@ Build the example
 $ make example
 ```
 
+![Example](test.xls.demo.png)
+
+This image represents the following code:
 ```c
 #include <stdio.h>
 
-#include "lib/inspector.h"
+#include "inspector.h"
 
 int main(void) {
 
@@ -46,7 +49,6 @@ int main(void) {
   inspector_destroy(inspector);
   return 0;
 }
-
 ```
 
-![Example](test.xls.demo.png)
+### **This is not intended to be the safest tool in the world, it is just a tool to help you understand how your program works.**
