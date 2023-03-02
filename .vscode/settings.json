@@ -1,0 +1,35 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "md.h": "c",
+        "inspector.h": "c",
+        "xls.h": "c",
+        "stdlib.h": "c",
+        "libxl.h": "c",
+        "util.h": "c",
+        "typeinfo": "c",
+        "__bit_reference": "c",
+        "__node_handle": "c",
+        "atomic": "c",
+        "bitset": "c",
+        "chrono": "c",
+        "cstddef": "c",
+        "__memory": "c",
+        "limits": "c",
+        "locale": "c",
+        "optional": "c",
+        "ratio": "c",
+        "system_error": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "vector": "c",
+        "sstream": "c"
+    },
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/lib/**"
+    ],
+
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: WebKit, ColumnLimit: 100 }",
+    "C_Cpp.clang_format_style": "LLVM"
+}
