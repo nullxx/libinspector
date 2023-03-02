@@ -6,8 +6,10 @@
 ## Example
 
 Build the example
-```bash
+```console
 $ make example
+$ ./example
+Saved to test.xls
 ```
 
 ![Example](test.xls.demo.png)
