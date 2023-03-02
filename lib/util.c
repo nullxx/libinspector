@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *get_rid_of_pointer(char *v) {
+const char *get_rid_of_pointer(const char *v) {
   for (int i = 0;; i++) {
 
     if (v[i] == '*' || v[i] == '&') {
@@ -13,6 +13,7 @@ char *get_rid_of_pointer(char *v) {
       break;
     }
   }
+
   return v;
 }
 
