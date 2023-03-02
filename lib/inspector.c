@@ -159,7 +159,8 @@ int inspector_destroy(inspector_t *inspector) {
 
 void _inspect(inspector_t *inspector, const char *name, const int size,
               unsigned char *start) {
-  char *str = build_str("%s", name);
+
+  char *str = build_str("%s", get_rid_of_pointer(name));
   write_inspect_header(inspector, str, 1);
   free(str);
 
@@ -179,7 +180,7 @@ void _inspect_arr(inspector_t *inspector, const char *name, const int arr_size,
                   const int type_size, unsigned char *start) {
 
   char *str;
-  str = build_str("%s[%d]", name, arr_size);
+  str = build_str("%s[%d]", get_rid_of_pointer(name), arr_size);
   write_inspect_header(inspector, str, 2);
   free(str);
 

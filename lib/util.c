@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifdef WIN32
 char *get_rid_of_pointer(char *v) {
   for (int i = 0;; i++) {
 
@@ -16,7 +15,7 @@ char *get_rid_of_pointer(char *v) {
   }
   return v;
 }
-#endif
+
 // if not def __GNUC__ or __clang__
 #if !defined(__GNUC__) || defined(__clang__)
 int vscprintf(const char *format, va_list ap) {
