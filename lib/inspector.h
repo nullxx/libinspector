@@ -23,12 +23,23 @@ int inspector_destroy(inspector_t *);
 
 void _inspect(inspector_t *, const char *name, const int type_size,
               unsigned char *start);
+/**
+ * @brief Inspect a variable
+ * @param *insp Inspector
+ * @param *value Variable to inspect
+ */
 #define inspect(insp, value)                                                   \
   _inspect(insp, __GET_VARIABLE_NAME(value), sizeof(*value),                   \
            (unsigned char *)value)
 
 void _inspect_arr(inspector_t *, const char *name, const int arr_size,
                   const int type_size, unsigned char *start);
+/**
+ * @brief Inspect an array
+ * @param *insp Inspector
+ * @param arr_size Size of the array
+ * @param *value Array to inspect
+ */
 #define inspect_arr(insp, arr_size, value)                                     \
   _inspect_arr(insp, __GET_VARIABLE_NAME(value), arr_size, sizeof(*value),     \
                (unsigned char *)value);
