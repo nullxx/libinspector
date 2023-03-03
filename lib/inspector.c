@@ -198,3 +198,7 @@ void _inspect_arr(inspector_t *inspector, const char *name, const int arr_size,
   inspector->col += ARR_INSPECTOR_N_COLS + SEPARATOR_N_COLS;
   inspector->row = MIN_ROW;
 }
+
+void _inspect_bytes(inspector_t *inspector, const char *name, const int size, unsigned char *start) {
+  _inspect(inspector, name, size, start);
+}

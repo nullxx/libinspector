@@ -28,6 +28,10 @@ int main(void) {
   inspect_arr(inspector, 4, a);
   inspect(inspector, &b);
 
+
+  int c = 0x0000F0FF;
+  inspect_bytes(inspector, 4, &c);
+
   inspector_save(inspector, "test.xls");
   printf("Saved to test.xls\n");
   inspector_destroy(inspector);
